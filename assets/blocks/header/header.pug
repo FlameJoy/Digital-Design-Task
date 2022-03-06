@@ -1,0 +1,32 @@
+.container 
+  .row 
+    #top.col-12
+      nav.navbar.navbar-expand-lg.navbar-light.bg-light
+        .container-fluid
+          a.navbar-brand.fs-1.fw-bold.text-primary(href='index.html') CSS
+          button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation')
+            span.navbar-toggler-icon
+          #navbarNavDropdown.collapse.navbar-collapse
+            ul.navbar-nav
+              li.nav-item.dropdown
+                a.nav-link.active.fs-4(aria-current="page" href="index.html") Главная
+              li.nav-item.dropdown
+                a#navbarDropdownMenuLink.nav-link.dropdown-toggle.fs-4.active(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false')
+                  | Оглавление
+                ul.dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                  li
+                    a.dropdown-item(href='#introduction') Введение
+                  li
+                    a.dropdown-item(href='#history') История создания и развития CSS
+                  li
+                    a.dropdown-item(href='#css-types') Виды каскадных таблиц стилей и их специфика
+                  li
+                    a.dropdown-item(href='#extentions') Расширения CSS
+                  li
+                    a.dropdown-item(href='#resources') Ресурсы
+              li.nav-item.dropdown
+                a.nav-link.active.fs-4(aria-current="page" href="task.html") Задание №2
+    .col-12
+      button.up-btn(type='submit') 
+        a.up-btn-icon(href="#top") 
+          i.bi.bi-arrow-up-circle.up-btn-icon

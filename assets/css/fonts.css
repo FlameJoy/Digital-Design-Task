@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 400;
+
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("../fonts/Helvetica/helvetica_regular.otf"),
+       /* Если не получилось, загрузит woff2 */
+       url("../fonts/Helvetica/helvetica_regular.otf") format("otf")
+}

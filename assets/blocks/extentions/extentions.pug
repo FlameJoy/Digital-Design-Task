@@ -1,0 +1,103 @@
+.container 
+  .row 
+    #extentions.col-12 
+      h2.text-center.text-uppercase.fw-bold.my-5 Расширения CSS
+  .row
+    .col-12 
+      p Вёрстая страницы, практически всегда приходится сталкиваться с тем, что нужно использовать одно и то же значение много раз: один и тот же цвет, один и тот же шрифт. И если это значение нужно будет изменить, то придётся менять во многих местах. 
+      p Для решения этих вопросов и ускорения разработки существует несколько расширений (препроцессоров) языка CSS. Расширений в том смысле, что код CSS является валидным кодом для расширения, но не наоборот. Чтобы из кода «расширенного CSS» получился обычный CSS-файл, воспринимаемый браузером, необходимо выполнить компиляцию. 
+      p Компиляция может быть нескольких типов:
+      ul 
+        li во время запуска страницы на стороне клиента; 
+        li во время запуска страницы на стороне сервера;
+        li во время вёрстки сайта средствами специального компилятора;
+      p Самые часто используемые препроцессоры на сегодня это - Sass и LESS. Рассотрим их:
+  .row.sass
+    .col-12.d-flex.flex-row
+      .col-md-6.col-sm-12.d-none.d-md-block
+        img.img-fluid(src="assets/img/dest/sass.jpg", alt="sass-logo")
+      .col-md-6.col-sm-12.d-flex.align-items-center
+        .text-wrap
+          p 
+            h4.fw-bold Sass 
+            span 
+              a.link(href="https://ru.wikipedia.org/wiki/Sass", target="_blank", rel="noopener noreferrer")  Sass (Syntactically Awesome Stylesheets) 
+              |  — модуль, включенный в Haml. Sass — это метаязык на основе CSS, предназначенный для увеличения уровня абстракции CSS-кода и упрощения файлов каскадных таблиц стилей. 
+          ul Язык Sass имеет два синтаксиса:
+            li sass — отличается отсутствием фигурных скобок, в нём вложенные элементы реализованы с помощью отступов;
+            li SCSS (Sassy CSS) — использует фигурные скобки, как и сам CSS.
+          p Одна из ключевых особенностей Sass — вложенные правила, которые облегчают процесс создания и редактирования вложенных селекторов. 
+          h4 Переменные в CSS
+          p Sass добавляет к CSS константы и примеси. Это облегчает поддержку целостности данных внутри большого набора стилей. Константы позволяют установить значение и использовать его внутри стилей, с помощью примесей то же самое можно сделать с блоком атрибутов стиля. 
+  .row 
+    .col-md-6.col-sm-12
+      h4.text-center Sass код
+    .col-md-6.col-sm-12
+      h4.text-center После трянсляции в CSS
+  .row.flex-row-reverse
+    .col-md-6.col-sm-12.d-flex.justify-content-center
+      .code-wrap.mt-3.p-4
+        span.d-block #header {
+        span.d-block.ms-4   background: #FFFFFF; 
+        span.d-block }
+        span.d-block.mt-3 #header .error {
+        span.d-block.ms-4   color: #FF0000; 
+        span.d-block }
+        span.d-block.mt-3 #header a {
+        span.d-block.ms-4   text-decoration: none; 
+        span.d-block }
+        span.d-block.mt-3 #header a:hover {
+        span.d-block.ms-4   text-decoration: underline; 
+        span.d-block }
+    .col-md-6.col-sm-12.d-flex.justify-content-center
+      .code-wrap.mt-3.p-4
+        span.d-block #header
+        span.d-block.ms-4   background: #FFFFFF; 
+        span.d-block.invisible invisible
+        span.d-block.mt-3 #header .error 
+        span.d-block.ms-4   color: #FF0000; 
+        span.d-block.invisible invisible
+        span.d-block.mt-3 #header a
+        span.d-block.ms-4   text-decoration: none; 
+        span.d-block.invisible invisible
+        span.d-block.mt-3 #header a:hover
+        span.d-block.ms-4   text-decoration: underline; 
+        span.d-block.invisible invisible
+  .row.less
+    .col-12.d-flex.flex-row.flex-row-reverse
+      .col-md-6.col-sm-12.d-none.d-md-block
+        img.img-fluid(src="assets/img/dest/less.jpg", alt="less-logo")
+      .col-md-6.col-sm-12.d-flex.align-items-center
+        .text-wrap
+          p 
+            h4.fw-bold LESS 
+            span 
+              a.link(href="https://ru.wikipedia.org/wiki/LESS_(%D1%8F%D0%B7%D1%8B%D0%BA_%D1%81%D1%82%D0%B8%D0%BB%D0%B5%D0%B9)", target="_blank", rel="noopener noreferrer") LESS (Leaner Style Sheets, компактная таблица стилей) 
+              |  — это динамический язык стилей, который разработал Alexis Sellier. Он создан под влиянием языка стилей Sass, и, в свою очередь, оказал влияние на его новый синтаксис «SCSS», в котором также использован синтаксис, являющийся расширением СSS.
+          p LESS — это продукт с открытым исходным кодом. Его первая версия была написана на Ruby, однако в последующих версиях было решено отказаться от использования этого языка программирования в пользу JavaScript. Less — это вложенный метаязык: валидный CSS будет валидной less-программой с аналогичной семантикой.  
+          h4 Переменные в Less
+          p Less позволяет использовать переменные. Имя переменной предваряется символом @. В качестве знака присваивания используется двоеточие (:). При трансляции значение переменной подставляется в результирующий CSS документ. 
+  .row 
+    .col-md-6.col-sm-12
+      h4.text-center CSS код
+    .col-md-6.col-sm-12
+      h4.text-center После трянсляции в LESS
+  .row
+    .col-md-6.col-sm-12.d-flex.justify-content-center
+      .code-wrap.mt-3.p-5
+        span.d-block #header {
+        span.d-block.ms-4   color: #4D926F; 
+        span.d-block }
+        span.d-block.mt-3 h2 {
+        span.d-block.ms-4   color: #4D926F;
+        span.d-block }
+    .col-md-6.col-sm-12.d-flex.justify-content-center
+      .code-wrap.mt-3.p-5
+        span.d-block @color: #4D926F;
+        span.d-block.mt-3 #header {
+        span.d-block.ms-4 color: @color;
+        span.d-block }
+        span.d-block.mt-3 h2 {
+        span.d-block.ms-4 color: @color;
+        span.d-block }
+  

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Все о CSS</title>
+    <!-- Bootstrap stylesheet-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+  </head>
+  <body> 
+    <div class="container"> 
+      <div class="row"> 
+        <div class="col-12" id="top">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid"><a class="navbar-brand fs-1 fw-bold text-primary" href="index.html">CSS</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item dropdown"><a class="nav-link active fs-4" aria-current="page" href="index.html">Главная</a></li>
+                  <li class="nav-item dropdown"><a class="nav-link dropdown-toggle fs-4 active" id="navbarDropdownMenuLink" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Оглавление</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <li><a class="dropdown-item" href="#introduction">Введение</a></li>
+                      <li><a class="dropdown-item" href="#history">История создания и развития CSS</a></li>
+                      <li><a class="dropdown-item" href="#css-types">Виды каскадных таблиц стилей и их специфика</a></li>
+                      <li><a class="dropdown-item" href="#extentions">Расширения CSS</a></li>
+                      <li><a class="dropdown-item" href="#resources">Ресурсы</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown"><a class="nav-link active fs-4" aria-current="page" href="task.html">Задание №2</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="col-12">
+          <button class="up-btn" type="submit"> <a class="up-btn-icon" href="#top"> <i class="bi bi-arrow-up-circle up-btn-icon"></i></a></button>
+        </div>
+      </div>
+    </div>
+    <div class="container"> 
+      <div class="row"> 
+        <div class="col-12"> 
+          <h2 class="fw-bold text-center">Получение даты</h2>
+        </div>
+        <div class="col-12 d-flex justify-content-center mt-4">
+          <div class="get-data-wrap d-flex flex-column">
+            <input class="date-input" id="date" type="date" name="getDate">
+            <button class="date-btn mt-4" onclick="getDayInfo()">Получить дату</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Scripts-->
+    <script src="assets/js/bootstrap.bundle.min.js"> </script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
